@@ -44,6 +44,7 @@ public class UserController {
         // új resource link visszaküldése
         // path: hozzáfűzi a stringet, és az {id} helyére beilleszti a savedUser.getId() -t
         // STEP-10
+        // mod
         URI location =  ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId()).toUri();
         return ResponseEntity.created(location).build();
         
